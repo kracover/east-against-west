@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>West side ou east side ?</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #cfe9f6, #ffffff);
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      overflow: hidden;
+      width: 250px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .main {
+      width: 500px;
+    }
+
+    .main img {
+      height: 250px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      background: black;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Carte gauche -->
+  <div class="card">
+    <img src="C:\Users\Marmay\Downloads\téléchargé (2).jfif" alt="image">
+    <div class="card-content">
+      <h2>West coast</h2>
+      <p>C'est quoi le west coast? </p>
+    </div>
+  </div>
+
+  <!-- Carte principale -->
+  <div class="card main">
+    <img src="C:\Users\Marmay\Downloads\téléchargé (3).png" alt="image">
+    <div class="card-content">
+      <h2>East coast</h2>
+      <p>...Et le east coast ? </p>
+      <button>Découvrir</button>
+    </div>
+  </div>
+
+  <!-- Carte droite -->
+</html>
