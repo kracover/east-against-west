@@ -4,63 +4,25 @@
   <meta charset="UTF-8">
   <title>East vs West</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      margin: 0;
-      height: 100vh;
-      background-color: #111;
-      color: #fff;
-    }
-
-    .sidebar {
-      width: 200px;
-      background-color: #222;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .artist-name {
-      padding: 10px;
-      margin-bottom: 10px;
-      background-color: #333;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.2s;
-    }
-
-    .artist-name:hover {
-      background-color: #555;
-    }
-
-    .middle {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 36px;
-    }
-  </style>
 </head>
 <body>
 
+  <!-- Sidebar des rappeurs -->
   <div class="sidebar">
-    <div class="artist-name" onclick="changeMiddle('Dr Dre')">Dr Dre</div>
-    <div class="artist-name" onclick="changeMiddle('Snoop Dogg')">Snoop Dogg</div>
-    <div class="artist-name" onclick="changeMiddle('Biggie')">Biggie</div>
-    <div class="artist-name" onclick="changeMiddle('Nas')">Nas</div>
+    <h2>West Coast</h2>
+    <div class="artist-name" onclick="changeMiddleWithDesc('Dr Dre', 'Légende du West Coast')">Dr Dre</div>
+    <div class="artist-name" onclick="changeMiddleWithDesc('Snoop Dogg', 'Icône West Coast')">Snoop Dogg</div>
+
+    <h2>East Coast</h2>
+    <div class="artist-name" onclick="changeMiddleWithDesc('Biggie', 'Icône East Coast')">Biggie</div>
+    <div class="artist-name" onclick="changeMiddleWithDesc('Nas', 'Légende East Coast')">Nas</div>
   </div>
 
-  <div class="middle" id="middle-name">
+  <!-- Zone du milieu -->
+  <div class="middle" id="middle-name" data-desc="Légende du West Coast">
     Dr Dre
   </div>
 
-  <script>
-    function changeMiddle(name) {
-      document.getElementById('middle-name').innerText = name;
-    }
-  </script>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
