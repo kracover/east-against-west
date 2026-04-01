@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Rap US</title>
-<link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8">
+  <title>East vs West</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      margin: 0;
+      height: 100vh;
+      background-color: #111;
+      color: #fff;
+    }
 
+    .sidebar {
+      width: 200px;
+      background-color: #222;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .artist-name {
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #333;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.2s;
+    }
+
+    .artist-name:hover {
+      background-color: #555;
+    }
+
+    .middle {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 36px;
+    }
+  </style>
+</head>
 <body>
 
-<div class="rap">
+  <div class="sidebar">
+    <div class="artist-name" onclick="changeMiddle('Dr Dre')">Dr Dre</div>
+    <div class="artist-name" onclick="changeMiddle('Snoop Dogg')">Snoop Dogg</div>
+    <div class="artist-name" onclick="changeMiddle('Biggie')">Biggie</div>
+    <div class="artist-name" onclick="changeMiddle('Nas')">Nas</div>
+  </div>
 
-    <!-- 🎤 AFFICHAGE -->
-    <div class="display">
+  <div class="middle" id="middle-name">
+    Dr Dre
+  </div>
 
-        <div class="artist-content dre">
-            <div class="card dre"></div>
-            <h1>DR DRE</h1>
-            <p>Figure majeure du West Coast, producteur légendaire.</p>
-        </div>
-
-        <div class="artist-content snoop">
-            <div class="card snoop"></div>
-            <h1>SNOOP DOGG</h1>
-            <p>Style laid-back iconique du rap West Coast.</p>
-        </div>
-
-        <div class="artist-content biggie active">
-            <div class="card biggie"></div>
-            <h1>NOTORIOUS B.I.G</h1>
-            <p>Légende du East Coast avec un flow unique.</p>
-        </div>
-
-        <div class="artist-content nas">
-            <div class="card nas"></div>
-            <h1>NAS</h1>
-            <p>Rappeur new-yorkais connu pour ses lyrics profonds.</p>
-        </div>
-
-    </div>
-
-    <!-- 🎧 MENU -->
-    <div class="menu">
-        <div class="item dre">Dr Dre (West)</div>
-        <div class="item snoop">Snoop Dogg (West)</div>
-        <div class="item biggie">Biggie (East)</div>
-        <div class="item nas">Nas (East)</div>
-    </div>
-
-</div>
+  <script>
+    function changeMiddle(name) {
+      document.getElementById('middle-name').innerText = name;
+    }
+  </script>
 
 </body>
 </html>
