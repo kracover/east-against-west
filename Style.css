@@ -1,1 +1,93 @@
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: Arial;
+}
 
+/* ===== STRUCTURE ===== */
+.rap {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== DISPLAY ===== */
+.display {
+    position: relative;
+    width: 60%;
+    text-align: center;
+}
+
+/* ===== CARD ===== */
+.card {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 🔥 IMAGES (A CHANGER) */
+.dre { background-image: url("dre.jpg"); }
+.snoop { background-image: url("snoop.jpg"); }
+.biggie { background-image: url("biggie.jpg"); }
+.nas { background-image: url("nas.jpg"); }
+
+/* ===== CONTENU ===== */
+.artist-content {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.active {
+    opacity: 1;
+}
+
+/* ===== MENU ===== */
+.menu {
+    position: absolute;
+    left: 50px;
+}
+
+.item {
+    margin: 15px 0;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.item:hover {
+    opacity: 1;
+    transform: translateX(10px);
+}
+
+/* ===== HOVER LOGIQUE 🔥 ===== */
+
+/* DRE */
+.menu .dre:hover ~ .display .dre { opacity: 1; }
+.menu .dre:hover ~ .display .snoop,
+.menu .dre:hover ~ .display .biggie,
+.menu .dre:hover ~ .display .nas { opacity: 0; }
+
+/* SNOOP */
+.menu .snoop:hover ~ .display .snoop { opacity: 1; }
+.menu .snoop:hover ~ .display .dre,
+.menu .snoop:hover ~ .display .biggie,
+.menu .snoop:hover ~ .display .nas { opacity: 0; }
+
+/* BIGGIE */
+.menu .biggie:hover ~ .display .biggie { opacity: 1; }
+.menu .biggie:hover ~ .display .dre,
+.menu .biggie:hover ~ .display .snoop,
+.menu .biggie:hover ~ .display .nas { opacity: 0; }
+
+/* NAS */
+.menu .nas:hover ~ .display .nas { opacity: 1; }
+.menu .nas:hover ~ .display .dre,
+.menu .nas:hover ~ .display .snoop,
+.menu .nas:hover ~ .display .biggie { opacity: 0; }
