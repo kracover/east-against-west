@@ -22,7 +22,21 @@
   <div class="middle" id="middle-name" data-desc="Légende du West Coast">
     Dr Dre
   </div>
+<script>
+function changeMiddleWithDesc(name, desc) {
+  const middleDiv = document.getElementById('middle-name');
+  middleDiv.innerText = name;
+  middleDiv.setAttribute('data-desc', desc);
 
+  if (desc.toLowerCase().includes('west')) {
+    middleDiv.style.color = '#00ff00';
+  } else if (desc.toLowerCase().includes('east')) {
+    middleDiv.style.color = '#ff0000';
+  } else {
+    middleDiv.style.color = '#fff';
+  }
+}
+</script>
   <script src="js/script.js"></script>
 </body>
 </html>
