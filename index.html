@@ -2,103 +2,17 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>West side ou east side ?</title>
-  <nav>
-    <a href="about.html">À propos</a>
-  </nav>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #cfe9f6, #ffffff);
-    }
-
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      overflow: hidden;
-      width: 250px;
-    }
-
-    .card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 15px;
-    }
-
-    .card-content h2 {
-      margin: 0;
-      font-size: 20px;
-    }
-
-    .card-content p {
-      font-size: 14px;
-      color: #555;
-    }
-
-    .main {
-      width: 500px;
-    }
-
-    .main img {
-      height: 250px;
-    }
-
-    button {
-      padding: 10px 15px;
-      border: none;
-      background: black;
-      color: white;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    button:hover {
-      background: #333;
-    }
-  </style>
+  <title>East vs West</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home">
 
-<div class="container">
+  <div class="home-container">
+    <h1>East Coast vs West Coast</h1>
+    <p>Choisis ton camp 🔥</p>
 
-<div style="position:fixed;top:0;left:50%;transform:translateX(-50%);background:#4CAF50;color:white;padding:15px 25px;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,0.2);font-size:20px;font-family:Arial, sans-serif;">
-    Ce site vous présente la rivalité entre la "west" et "east" side:
-</div>
-  <!-- Carte gauche -->
-  <div class="card">
-    <img src="téléchargé (2).jfif">
-    <div class="card-content">
-      <h2>West coast</h2>
-      <p>C'est quoi le west coast? </p>
-      <button>
-        <a href=https://www.canva.com/design/DAHEvSX1VmU/fgSewWGHgb8Rw53tkpt_8g/view?embed>Découvrir</a>
-      </button>
-    </div>
+    <a href="about.html" class="btn">ENTRER</a>
   </div>
 
-  <!-- Carte principale -->
-  <div class="card main">
-    <img src="téléchargé (3).png">
-    <div class="card-content">
-      <h2>East coast</h2>
-      <p>...Et le east coast ? </p>
-      <button>Découvrir</button>
-    </div>
-  </div>
-
-</div>
+</body>
 </html>
