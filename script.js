@@ -1,22 +1,38 @@
-// Fonction pour changer le nom au milieu, sa description, sa couleur et l'image de fond
-function changeMiddleWithImage(name, desc, imgUrl) {
-  const middleDiv = document.getElementById('middle-name');
+let currentAudio = document.getElementById("player");
 
-  // Changer le texte au milieu
-  middleDiv.innerText = name;
+function changeArtist(name, desc, img, audio) {
+  const middle = document.getElementById('middle-name');
 
-  // Changer la description qui apparaît au survol
-  middleDiv.setAttribute('data-desc', desc);
+  // TEXTE
+  middle.innerText = name;
+  middle.setAttribute('data-desc', desc);
 
-  // Changer l'image de fond (IMAGE comme placeholder)
-  middleDiv.style.backgroundImage = `url('${imgUrl}')`;
+  // IMAGE
+  middle.style.backgroundImage = `url('${img}')`;
 
-  // Changer la couleur du texte selon la côte
+  // COULEUR
   if (desc.toLowerCase().includes('west')) {
-    middleDiv.style.color = '#00ff00'; // vert pour West Coast
-  } else if (desc.toLowerCase().includes('east')) {
-    middleDiv.style.color = '#ff0000'; // rouge pour East Coast
+    middle.style.color = "#00ff00";
   } else {
-    middleDiv.style.color = '#ffffff'; // blanc par défaut
+    middle.style.color = "#ff0000";
+  }
+
+  // SON
+  currentAudio.src = audio;
+  currentAudio.play();
+
+  // ANIMATION
+  middle.style.transform = "scale(1.1)";
+  setTimeout(() => {
+    middle.style.transform = "scale(1)";
+  }, 200);
+}
+
+// PLAY / PAUSE
+function togglePlay() {
+  if (currentAudio.paused) {
+    currentAudio.play();
+  } else {
+    currentAudio.pause();
   }
 }
