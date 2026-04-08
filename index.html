@@ -34,68 +34,6 @@
       height: 100%;
     }
 
-    /* CARTES */
-    .card {
-      background: #222;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-      overflow: hidden;
-      width: 500px;
-      height: 900px;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
-      height: 400px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 10px;
-    }
-
-    .card-content h2 {
-      margin: 0;
-      font-size: 18px;
-    }
-
-    .card-content p {
-      font-size: 14px;
-      color: #aaa;
-    }
-
-    /* CARTE CENTRALE */
-    .main-card {
-      width: 400px;
-      background: #333;
-    }
-
-    .main-card img {
-      height: 250px;
-    }
-
-    .main-card button {
-      margin-top: 10px;
-      padding: 10px 15px;
-      border: none;
-      background: black;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .main-card button:hover {
-      background: lime;
-      color: black;
-    }
-
     /* OVERLAY sombre pour contraste */
     .overlay {
       position: absolute;
@@ -162,26 +100,6 @@
 
   <div class="overlay"></div>
 
-  
-  <!-- Carte gauche (West Coast) -->
-  <div class="card">
-    <img src="media/west.jfif" alt="West">
-    <div class="card-content">
-      <h2>West Coast</h2>
-      <div class="video-container">
-  <iframe width="560" height="315" 
-          src="https://www.youtube.com/embed/-7WRgLNNEO0" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-  </iframe>
-</div>
-      <p>Description ou texte ici</p>
-      <button> Découvrir </button>
-    </div>
-  </div>
-
   <div class="home-container">
     <h1>East Coast vs West Coast</h1>
     <p>Plonge dans l’univers du
@@ -190,25 +108,6 @@
        </a>
     </p>
     <a href="about.html" class="btn">ENTRER DANS LA BATTLE</a>
-  </div>
-
-    <!-- Carte droite (East Coast) -->
-  <div class="card">
-    <img src="media/east.jfif" alt="East">
-    <div class="card-content">
-      <h2>East Coast</h2>
-      <div class="video-container">
-  <iframe width="560" height="315" 
-          src="https://www.youtube.com/embed/eDB-c-NFNJE" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-  </iframe>
-</div>
-      <p>Description ou texte ici</p>
-      <button> Découvrir </button>
-    </div>
   </div>
   
 </body>
