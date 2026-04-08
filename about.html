@@ -2,41 +2,35 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>East vs West</title>
+  <title>Battle</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Sidebar des rappeurs -->
+  <!-- AUDIO PLAYER -->
+  <audio id="player"></audio>
+
+  <!-- SIDEBAR -->
   <div class="sidebar">
     <h2>West Coast</h2>
-    <div class="artist-name" onclick="changeMiddleWithDesc('Dr Dre', 'Légende du West Coast', 'drdre')">Dr Dre</div>
-    <div class="artist-name" onclick="changeMiddleWithDesc('Snoop Dogg', 'Icône West Coast')">Snoop Dogg</div>
+    <div class="artist-name" onclick="changeArtist('Dr Dre','Légende West Coast','media/drdre.png','media/drdre.mp3')">Dr Dre</div>
+    <div class="artist-name" onclick="changeArtist('Snoop Dogg','Icône West Coast','media/snoop.png','media/snoop.mp3')">Snoop Dogg</div>
 
     <h2>East Coast</h2>
-    <div class="artist-name" onclick="changeMiddleWithDesc('Biggie', 'Icône East Coast')">Biggie</div>
-    <div class="artist-name" onclick="changeMiddleWithDesc('Nas', 'Légende East Coast')">Nas</div>
+    <div class="artist-name" onclick="changeArtist('Biggie','Icône East Coast','media/biggie.png','media/biggie.mp3')">Biggie</div>
+    <div class="artist-name" onclick="changeArtist('Nas','Légende East Coast','media/nas.png','media/nas.mp3')">Nas</div>
   </div>
 
-  <!-- Zone du milieu -->
-  <div class="middle" id="middle-name" data-desc="Légende du West Coast">
-    Dr Dre
+  <!-- CENTRE -->
+  <div class="middle" id="middle-name" data-desc="Clique sur un artiste">
+    CHOISIS UN ARTISTE
   </div>
-<script>
-function changeMiddleWithDesc(name, desc) {
-  const middleDiv = document.getElementById('middle-name');
-  middleDiv.innerText = name;
-  middleDiv.setAttribute('data-desc', desc);
 
-  if (desc.toLowerCase().includes('west')) {
-    middleDiv.style.color = '#00ff00';
-  } else if (desc.toLowerCase().includes('east')) {
-    middleDiv.style.color = '#ff0000';
-  } else {
-    middleDiv.style.color = '#fff';
-  }
-}
-</script>
+  <!-- CONTROLES -->
+  <div class="controls">
+    <button onclick="togglePlay()">⏯ Play / Pause</button>
+  </div>
+
   <script src="js/script.js"></script>
 </body>
 </html>
